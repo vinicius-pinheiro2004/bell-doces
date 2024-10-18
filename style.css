@@ -1,0 +1,212 @@
+body { 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Ajuste a altura conforme necessário */
+    overflow: hidden;
+}
+
+header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+}
+
+nav {
+    position: absolute;
+    bottom: 10px; /* Ajuste a posição do menu de navegação */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente para melhor legibilidade */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1; /* Garante que o menu fique acima da imagem */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000; /* Altere a cor para melhor legibilidade sobre o fundo */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Efeito de transição na cor */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+main {
+    padding: 20px;
+}
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os produtos se movam para a próxima linha, se necessário */
+    justify-content: center; /* Centraliza os produtos */
+    margin-top: 20px; /* Espaço acima dos produtos */
+}
+
+.produto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave */
+    width: 200px; /* Define uma largura fixa para cada produto */
+    text-align: center; /* Centraliza o texto dentro do produto */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #fff; /* Fundo branco para os produtos */
+}
+
+.produto:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */
+}
+
+.imagem-produto {
+    max-width: 100%; /* Ajusta a largura máxima da imagem */
+    height: auto;    /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+    cursor: pointer; /* Cursor pointer ao passar sobre a imagem */
+}
+
+button.adicionar {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    transition: background 0.3s ease; /* Transição suave para o fundo */
+}
+
+button.adicionar:hover {
+    background: #218838; /* Cor ao passar o mouse */
+}
+
+#carrinho {
+    background-color: #f8f9fa; /* Fundo claro para destacar a seção */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px; /* Reduz o padding */
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+    max-width: 400px; /* Define uma largura máxima para o carrinho */
+    margin-left: auto; /* Centraliza o carrinho horizontalmente */
+    margin-right: auto; /* Centraliza o carrinho horizontalmente */
+}
+
+#carrinho h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5em; /* Tamanho da fonte do título */
+}
+
+#lista-carrinho {
+    list-style: none;
+    padding: 0;
+    max-height: 200px; /* Limita a altura da lista */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+}
+
+#lista-carrinho li {
+    display: flex;
+    justify-content: space-between; /* Alinha o texto e o botão */
+    padding: 8px; /* Reduz o padding dos itens */
+    border-bottom: 1px solid #ddd; /* Linha separadora */
+}
+
+#lista-carrinho li:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+button.remover {
+    background: #dc3545; /* Cor de fundo vermelha */
+    color: white;
+    border: none;
+    padding: 5px 8px; /* Reduz o padding */
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 0.9em; /* Tamanho da fonte do botão */
+    transition: background 0.3s ease; /* Transição suave */
+}
+
+button.remover:hover {
+    background: #c82333; /* Cor mais escura ao passar o mouse */
+}
+
+#total {
+    font-weight: bold;
+    text-align: right; /* Alinha o total à direita */
+    margin-top: 10px; /* Espaço acima do total */
+    font-size: 1.1em; /* Tamanho da fonte do total */
+}
+
+/* Estilos do modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+}
+
+.modal-conteudo {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centraliza verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    max-width: 500px; /* Largura máxima */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 10px; /* Bordas arredondadas para o modal */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra para o modal */
+}
+
+.imagem-modal {
+    max-width: 100%; /* Imagem ocupa toda a largura do modal */
+    height: auto; /* Mantém a proporção */
+}
+
+.fechar {
+    color: #aaa;
+    float: right; /* Alinha à direita */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black; /* Muda a cor ao passar o mouse */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="delicias da bell1.jfif" alt="Produto 2" class="imagem-produto" width="2000" height="300">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="produtos">
+            <div class="produto" data-nome="Produto 1" data-preco="100">
+                <img src="imagem1.jpg" alt="Produto 1" class="imagem-produto">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1.</p>
+                <span>Preço: R$ 100,00</span>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-nome="Produto 2" data-preco="150">
+                <img src="imagem2.jpg" alt="Produto 2" class="imagem-produto">
+                <h3>Produto 2</h3>
+                <p>Descrição do Produto 2.</p>
+                <span>Preço: R$ 150,00</span>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-nome="Produto 3" data-preco="200">
+                <img src="imagem3.jpg" alt="Produto 3" class="imagem-produto">
+                <h3>Produto 3</h3>
+                <p>Descrição do Produto 3.</p>
+                <span>Preço: R$ 200,00</span>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-nome="Produto 4" data-preco="250">
+                <img src="imagem4.jpg" alt="Produto 4" class="imagem-produto">
+                <h3>Produto 4</h3>
+                <p>Descrição do Produto 4.</p>
+                <span>Preço: R$ 250,00</span>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-nome="Produto 5" data-preco="300">
+                <img src="imagem5.jpg" alt="Produto 5" class="imagem-produto">
+                <h3>Produto 5</h3>
+                <p>Descrição do Produto 5.</p>
+                <span>Preço: R$ 300,00</span>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-nome="Produto 6" data-preco="350">
+                <img src="imagem6.jpg" alt="Produto 6" class="imagem-produto">
+                <h3>Produto 6</h3>
+                <p>Descrição do Produto 6.</p>
+                <span>Preço: R$ 350,00</span>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-nome="Produto 7" data-preco="400">
+                <img src="imagem7.jpg" alt="Produto 7" class="imagem-produto">
+                <h3>Produto 7</h3>
+                <p>Descrição do Produto 7.</p>
+                <span>Preço: R$ 400,00</span>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+
+        <section id="carrinho">
+            <h2>Carrinho</h2>
+            <ul id="lista-carrinho"></ul>
+            <strong id="total">Total: R$ 0,00</strong>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <img id="imagem-modal" class="imagem-modal" src="" alt="Imagem do Produto">
+            <h3 id="nome-produto-modal"></h3>
+            <p id="descricao-produto-modal"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Loja Online. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
